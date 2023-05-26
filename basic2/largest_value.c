@@ -8,7 +8,7 @@ int main()
     scanf("%d",&b);
     printf("Enter 3rd number: ");
     scanf("%d",&c);
-    if (a>b & a>c)
+    if (a>b && a>c)
         printf("%d is largest number",a);
     else if(b>c)
         printf("%d is largest number",b);
