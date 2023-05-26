@@ -16,4 +16,3 @@ int main()
         printf("%d is largest number",c);
     return 0;
 }
-===
