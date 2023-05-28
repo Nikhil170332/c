@@ -5,7 +5,7 @@ int main()
     int limit,i,j,count =0;
     printf("Enter the range of number you want to print prime numbers");
     scanf("%d",&limit);
-    for (i=2;i<limit;i++)
+    for (i=2;i<limit+1;i++)
     {
         for (j=2;j<i;j++)
         {
