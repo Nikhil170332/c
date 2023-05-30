@@ -11,8 +11,8 @@ int main()
     {
         if (n%i==0)
         {
-            printf("%d ",n/i);
-            sum =(n/i) + sum;
+            printf("%d ",i);
+            sum =i + sum;
         }
         
     }
