@@ -1,49 +1,42 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
-    int s,i,j;
-    printf("Enter the size of matrix\n");
-    scanf("%d",&s);
-    printf("Enter the values for %dx%d matrix\n",s,s);
-    int n[s][s];
-    for(i=0;i<s;i++)
+    int r,c,i,j;
+    printf("Enter the no of rows of matrix\n");
+    scanf("%d",&r);
+    printf("Enter the no of columns of matrix\n");
+    scanf("%d",&c);
+    int n[r][c];
+    if (r==c)
     {
-        for(j=0;j<s;j++)
+        for(i=0;i<r;i++)
         {
-            printf("Enter element for row:%d,column:%d ",i+1,j+1);
-            scanf("%d",&n[i][j]);
+            for(j=0;j<c;j++)
+            {
+                if(i==j)
+                {
+                    n[i][j]=1;
+                }
+                else
+                {
+                    n[i][j]=0;
+                }
+            }
         }
     }
-    printf("matrix elements\n");
-    for(i=0;i<s;i++)
+    else
     {
-        for(j=0;j<s;j++)
+        printf("For given number of rows and columns, unit matrix not possible ");
+    }
+    printf("\nUnit matrix for %dx%d size\n",r,c);
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
         {
-            printf("%d  ",n[i][j]);
+            printf("%d   ",n[i][j]);
         }
         printf("\n\n");
     }
-    for (i=0;i<s;i++)
-    {
-        for (j=0;j<s;j++)
-        {
-            if (i==j && n[i][j]==1)
-            {
-                continue;
-            }
-            else if(i!=j && n[i][j]==0)
-            {
-                continue;
-            }
-            else
-            {
-                printf("\nGiven matrix is not Unit matrix\n");
-                exit(0);
-            }
-        }
-    }
-    printf("\n\tGiven matrix is Unit matrix!!!");
     return 0;
 }
